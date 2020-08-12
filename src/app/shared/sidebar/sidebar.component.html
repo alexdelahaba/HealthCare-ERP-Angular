@@ -11,9 +11,9 @@
           <a class="has-arrow waves-effect waves-dark"
              href="#"
              aria-expanded="false">
-            <!-- <img [src]="usuario.img | imagen"
-                 alt="user" /> -->
-            <!-- <span class="hide-menu"> {{ usuario.nombre }} </span> -->
+            <img [src]="usuario.img | imagen"
+                 alt="user" />
+            <span class="hide-menu"> {{ usuario.nombre }} </span>
           </a>
           <ul aria-expanded="false"
               class="collapse">
@@ -23,18 +23,27 @@
             <li><a href="javascript:void()">Inbox</a></li>
             <li><a routerLinkActive="active"
                  routerLink="/account-settings">Account Setting</a></li>
-            <!-- <li><a (click)="_usuarioService.logout()"
-                 class="pointer">Logout</a></li> -->
+            <li><a (click)="usuarioService.logout()"
+                 class="pointer">Logout</a></li>
           </ul>
         </li>
         <li class="nav-devider"></li>
         <li class="nav-small-cap">PERSONAL</li>
 
 
-        <!-- <li *ngFor="let menu of _sidebar.menu">
+
+
+
+        <li *ngFor="let menu of sidebarService.menu">
           <a class="has-arrow waves-effect waves-dark"
-             aria-expanded="false"><i [class]="menu.icono"></i><span class="hide-menu"> {{ menu.titulo }} <span
-                    class="label label-rouded label-themecolor pull-right"> {{ menu.submenu.length }} </span></span></a>
+             aria-expanded="false">
+            <i [class]="menu.icono"></i>
+            <span class="hide-menu"> {{ menu.titulo }}
+              <span class="label label-rouded label-themecolor pull-right">
+                {{ menu.submenu.length }}
+              </span>
+            </span>
+          </a>
           <ul aria-expanded="false"
               class="collapse">
 
@@ -43,11 +52,11 @@
                  [routerLink]="[ submenu.url ]"> {{ submenu.titulo }} </a>
             </li>
 
-           <li><a href="index2.html">Analytical</a></li>
-                        <li><a href="index3.html">Demographical</a></li>
-                        <li><a href="index4.html">Modern</a></li>
-      </ul>
-      </li> -->
+            <!-- <li><a href="index2.html">Analytical</a></li>
+            <li><a href="index3.html">Demographical</a></li>
+            <li><a href="index4.html">Modern</a></li> -->
+          </ul>
+        </li>
 
 
       </ul>

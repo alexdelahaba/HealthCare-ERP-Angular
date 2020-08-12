@@ -7,12 +7,13 @@
   <div class="login-box card">
     <div class="card-body">
 
-      <!-- [formGroup]="forma"
-      (ngSubmit)="registrarUsuario()" -->
+
 
       <form ngNativeValidate
             class="form-horizontal form-material"
             id="loginform"
+            [formGroup]="forma"
+            (ngSubmit)="registrarUsuario()"
             action="index.html">
         <a href="javascript:void(0)"
            class="text-center db"><img src="assets/images/logo-icon.png"
@@ -60,10 +61,11 @@
           </div>
         </div>
 
-        <!-- *ngIf="forma.errors?.sonIguales && !forma.pristine"> -->
-        <div class="form-group">
+
+        <div class="form-group"
+             *ngIf="forma.errors?.sonIguales && !forma.pristine">
           <p class="text-danger">
-            Las contraseñas deben de se iguales
+            Las contraseñas deben ser iguales
           </p>
         </div>
 
@@ -88,7 +90,7 @@
         <div class="form-group m-b-0">
           <div class="col-sm-12 text-center">
             <p>¿Tienes una cuenta? <a routerLink="/login"
-                 class="text-info m-l-5"><b>Ingresa ahora</b></a></p>
+                 class="text-info m-l-5"><b>Accede ahora</b></a></p>
           </div>
         </div>
       </form>
